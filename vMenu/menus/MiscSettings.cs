@@ -7,6 +7,7 @@ using CitizenFX.Core;
 using static CitizenFX.Core.Native.API;
 using static vMenuClient.CommonFunctions;
 using static vMenuShared.PermissionsManager;
+using static vMenuShared.ConfigManager;
 
 namespace vMenuClient
 {
@@ -28,8 +29,8 @@ namespace vMenuClient
         public bool LockCameraX { get; private set; } = false;
         public bool LockCameraY { get; private set; } = false;
         public bool ShowLocationBlips { get; private set; } = UserDefaults.MiscLocationBlips;
-        public bool ShowPlayerBlips { get; private set; } = UserDefaults.MiscShowPlayerBlips;
-        public bool MiscShowOverheadNames { get; private set; } = UserDefaults.MiscShowOverheadNames;
+        public bool ShowPlayerBlips { get; private set; } = GetSettingsBool(Setting.vmenu_enable_player_blips);
+        public bool MiscShowOverheadNames { get; private set; } = GetSettingsBool(Setting.vmenu_enable_player_overhead_names);
         public bool ShowVehicleModelDimensions { get; private set; } = false;
         public bool ShowPedModelDimensions { get; private set; } = false;
         public bool ShowPropModelDimensions { get; private set; } = false;

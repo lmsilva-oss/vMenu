@@ -19,6 +19,8 @@ namespace vMenuShared
             vmenu_menu_toggle_key,
             vmenu_noclip_toggle_key,
             vmenu_keep_spawned_vehicles_persistent,
+            vmenu_enable_player_blips,
+            vmenu_enable_player_overhead_names,
             vmenu_use_els_compatibility_mode,
             vmenu_quit_session_in_rockstar_editor,
             vmenu_server_info_message,
